@@ -14,5 +14,7 @@
 		- maybe the strength decreasing as the fight goes along and make the question of kicking and punching more strategic 
 
 		- what about a menu from which we can start a game where we create fighters and then make them fight to hp == 0 
+
+		- what about ansci methods for fights! -- no, too crazy... maybe.. 
 	
 		- Any idea is welcome ! 

@@ -8,23 +8,27 @@ class Fighter
 	    @name = player_name
 
 	end
-	
+
 	def punch(player_name)
 	  player_name.hp = player_name.hp - 10
+    dead?
 	end
 
 	def kick(player_name)
 	  player_name.hp = player_name.hp - 20
-	 end
+    dead?
+	end
 
-	 def dead?
-		 @hp <= 0 ? true : false		
-	 end
-	
 	 def to_s
 	   "  The fight #{@name} has #{@hp} hp"
 	 end
 
+   private
+
+
+   def dead?
+     @hp <= 0 ? true : false
+   end
 end
 
 

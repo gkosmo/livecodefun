@@ -1,32 +1,29 @@
 require_relative 'view_fighter'
-class FighterController
 
+class FighterController
 
 	def initialize(fighters)
 	   @fighters = fighters
 	   @view = ViewFighter.new
 	end
 
-
-
-
 	def list
 	    list = @fighters.all
-            @view.list_fighters(list)
+      @view.list_fighters(list)
 	end
 
 
-        def create
-          fighterchoice = @view.get_choice_of_fighter
+  def create
+    fighterchoice = @view.get_choice_of_fighter
 	  until fighterchoice == 1 || fighterchoice == 2
-		fighterchoice = @view.get_choice_of_fighter
+		  fighterchoice = @view.get_choice_of_fighter
 	  end
 	  fightername = @view.get_choice_name
 	  if fighterchoice == 1
-		new_fighter = Fighter.new(fightername)
+		  new_fighter = Fighter.new(fightername)
 	  elsif fighterchoice == 2
-		new_fighter = MonkFighter.new(fightername)		  
-	  end		
+		  new_fighter = MonkFighter.new(fightername)
+	  end
 	  @fighters.add_fighter(new_fighter)
 	end
 
